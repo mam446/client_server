@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+message MessageBuffer {
+        enum Message_Type {
+
+        ECHO = 0;
+        PRINT = 1;
+        TIME = 2;
+
+        }
+
+        required Message_Type msg_type = 1 [default = ECHO];
+        required string sent_time = 2;
+        required string from_addr = 3;
+        required string to_addr = 4;
+        
+        optional string data = 5;
+};
+
+
+
+
+
+
+
+
